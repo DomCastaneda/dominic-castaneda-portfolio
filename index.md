@@ -7,6 +7,7 @@
 <img src="images/housingprices.jpg?raw=true"/>
 
 Performed a planned data analysis in Python on the California housing market using a supervised model (linear regression) to help find predictor influence and predict household income.
+
 [View Project](https://colab.research.google.com/drive/1uV9IX9s5YTYkXLnwXzScISJhEtS178Py)
 
 ---
@@ -16,6 +17,7 @@ Performed a planned data analysis in Python on the California housing market usi
 <img src="images/screensaverapp.png?raw=true"/>
 
 Developed a cross-platform, Electron-based application that allows users to create a screensaver from Instagram and Reddit accounts. Integrated Instagram Basic Display API and Reddit API to obtain an access tokens for image fetching
+
 [View Project](https://github.com/tarekel96/Electron_BackgroundImage_App)
 
 ---
