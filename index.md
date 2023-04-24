@@ -5,7 +5,7 @@
 ### My Projects 
 
 [California Housing Prices Data Analysis](/sample_page)
-<img src="images/housingprices.png?raw=true"/>
+<img src="images/housingprices.jpg?raw=true"/>
 
 ---
 [Social Media Screensaver](/pdf/sample_presentation.pdf)
