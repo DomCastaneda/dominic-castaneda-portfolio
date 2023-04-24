@@ -56,8 +56,3 @@ Created a web scraping program that gathers data from car part websites to find 
 Email: dominic.amir.castaneda@gmail.com
 
 ---
-
-
-
-
----
