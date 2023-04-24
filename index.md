@@ -44,7 +44,7 @@ Created a web scraping program that gathers data from car part websites to find 
 [View Project](https://github.com/DomCastaneda/CarPartWebscraper)
 ---
 
-### Contact Me
+## Contact Me
 
 Email: dominic.amir.castaneda@gmail.com
 
