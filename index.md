@@ -4,7 +4,7 @@
 
 ### My Projects 
 
-[California Housing Prices Data Analysis](/sample_page)
+[California Housing Prices Data Analysis](https://colab.research.google.com/drive/1uV9IX9s5YTYkXLnwXzScISJhEtS178Py)
 <img src="images/housingprices.jpg?raw=true"/>
 
 ---
@@ -16,7 +16,7 @@
 <img src="images/pollinatorbot.png?raw=true"/>
 
 ---
-[Word Worm](http://example.com/)
+[Word Worm](https://og-josh.itch.io/word-worm)
 <img src="images/wordworm.jpg?raw=true"/>
 
 ---
