@@ -12,7 +12,7 @@
 <img src="images/screensaverapp.png?raw=true"/>
 
 ---
-[Pollinator Robot](/pdf/sample_presentation.pdf)
+[Pollinator Robot]<!---(/pdf/sample_presentation.pdf)-->
 <img src="images/pollinatorbot.png?raw=true"/>
 
 ---
