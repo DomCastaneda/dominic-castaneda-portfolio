@@ -2,18 +2,26 @@
 
 ---
 
-### Category Name 1 
+### My Projects 
 
-[Project 1 Title](/sample_page)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
-
----
-[Project 2 Title](/pdf/sample_presentation.pdf)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[California Housing Prices Data Analysis](/sample_page)
+<img src="images/housingprices.png?raw=true"/>
 
 ---
-[Project 3 Title](http://example.com/)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[Social Media Screensaver](/pdf/sample_presentation.pdf)
+<img src="images/screensaverapp.png?raw=true"/>
+
+---
+[Pollinator Robot](http://example.com/)
+<img src="images/pollinatorbot.png?raw=true"/>
+
+---
+[Word Worm](http://example.com/)
+<img src="images/wordworm.jpg?raw=true"/>
+
+---
+[Car Part Webscraper](http://example.com/)
+<img src="images/webscraper.png?raw=true"/>
 
 ---
 
