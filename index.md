@@ -8,11 +8,11 @@
 <img src="images/housingprices.jpg?raw=true"/>
 
 ---
-[Social Media Screensaver](/pdf/sample_presentation.pdf)
+[Social Media Screensaver](https://github.com/tarekel96/Electron_BackgroundImage_App)
 <img src="images/screensaverapp.png?raw=true"/>
 
 ---
-[Pollinator Robot](http://example.com/)
+[Pollinator Robot](/pdf/sample_presentation.pdf)
 <img src="images/pollinatorbot.png?raw=true"/>
 
 ---
@@ -20,7 +20,7 @@
 <img src="images/wordworm.jpg?raw=true"/>
 
 ---
-[Car Part Webscraper](http://example.com/)
+[Car Part Webscraper](https://github.com/DomCastaneda/CarPartWebscraper)
 <img src="images/webscraper.png?raw=true"/>
 
 ---
