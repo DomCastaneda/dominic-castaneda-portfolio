@@ -11,9 +11,9 @@ description: >
   <br><br>
   <center>
   <a href="https://www.linkedin.com/in/dominic-castaneda/"><img src="/images/linkedin.png" width="40" 
-     height="40"></a>
+     height="35"></a>
   <a href="https://github.com/DomCastaneda"><img src="/images/github.png" width="40" 
-     height="40"></a>
+     height="35"></a>
   </center>
   
 remote_theme: pages-themes/minimal@v0.2.0
