@@ -6,15 +6,18 @@ description: >
   including: planning, designing, building testing, and deployment. Something that I love about software 
   development is the opportunity to work on a team and connect with others. I’m eager to meet 
   and learn from other software engineers, so feel free to connect on LinkedIn!
-  <center>
-  <a href="/images/Dominic-Castaneda-Resume.pdf" download="Dominic-Castaneda-Resume">My Resume</a>
-  <br></br>
-  <a href="https://www.linkedin.com/in/dominic-castaneda/"><img src="/images/linkedin.png" width="59.95" 
-     height="50"></a>
-  <a href="https://github.com/DomCastaneda"><img src="/images/github.png" width="59.95" 
-     height="50"></a>
-  </center>
   
+  <footer>
+    <center>
+      <a href="/images/Dominic-Castaneda-Resume.pdf" download="Dominic-Castaneda-Resume">My Resume</a>
+      <br></br>
+      <a href="https://www.linkedin.com/in/dominic-castaneda/"><img src="/images/linkedin.png" width="59.95" 
+         height="50"></a>
+      <a href="https://github.com/DomCastaneda"><img src="/images/github.png" width="59.95" 
+         height="50"></a>
+    </center>
+  </footer>
+
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme
