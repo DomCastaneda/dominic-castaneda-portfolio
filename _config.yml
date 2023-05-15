@@ -10,10 +10,10 @@ description: >
   <center>
   <a href="/images/Dominic-Castaneda-Resume.pdf" download="Dominic-Castaneda-Resume">My Resume</a>
   <br></br>
-  <a href="https://www.linkedin.com/in/dominic-castaneda/"><img src="/images/linkedin.png" width="80" 
-     height="75"></a>
-  <a href="https://github.com/DomCastaneda"><img src="/images/github.png" width="80" 
-     height="75"></a>
+  <a href="https://www.linkedin.com/in/dominic-castaneda/"><img src="/images/linkedin.png" width="71.94" 
+     height="60"></a>
+  <a href="https://github.com/DomCastaneda"><img src="/images/github.png" width="71.94" 
+     height="60"></a>
   </center>
   
 remote_theme: pages-themes/minimal@v0.2.0
