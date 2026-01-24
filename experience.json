@@ -1,0 +1,85 @@
+[
+    {
+        "role": "Jr. Software Engineer",
+        "company": "Origence",
+        "logo": "asset/experience/origence.jpeg",
+        "date": "July 2023 - Present",
+        "companyUrl": "https://www.linkedin.com/company/origencecompany/posts/?feedView=all",
+        "description": [
+            "Collaborated with senior engineers to modernize and migrate web applications and APIs to cloud infrastructure.",
+            "Supported database migrations by validating schema changes, redeploying services, and ensuring data consistency.",
+            "Designed and implemented internal and external APIs with structured logging and regression testing for improved reliability.",
+            "Participated in API modernization and template migration efforts to align with cloud and microservice standards.",
+            "Verified system health and API performance after releases using Datadog dashboards and alerts to ensure stability and up-time."
+        ],
+        "skills": [
+            "APIs",
+            "Cloud Infrastructure",
+                "SQL Databases",
+                ".NET",
+                "AngularJS",
+                "Playwright"
+        ]
+    },
+    {
+        "role": "Data Scientist",
+        "company": "UC Irvine Health",
+        "logo": "asset/experience/ucihealth.jpeg",
+        "date": "February 2023 - July 2023",
+        "companyUrl": "https://www.linkedin.com/company/uc-irvine-medical-center/",
+        "description": [
+            "Co-authored AACR 2024 abstract on spatial transcriptomic analysis of prostate cancer.",
+            "Developed and maintained custom bio-informatics pipelines for processing genomics data using R and Python.",
+            "Worked closely with researchers and scientists to understand and meet their needs and requirements for bio-informatics data analysis.",
+            "Analyzed large-scale genomic data sets to identify genetic variations and relative gene expressions.",
+            "Utilized Louvain clustering algorithm to group cells into clusters and used UMAP projections for dimension reduction.",
+            "Processed single-cell RNA sequencing data for analysis and visualization of single-cell and spatially resolved datasets."
+        ],
+        "skills": [
+            "R",
+            "Python",
+            "Single-cell RNA-seq",
+            "Spatial Transcriptomics",
+            "Clustering (Louvain)",
+            "UMAP",
+            "Bioinformatics Pipelines"
+        ]
+    },
+    {
+        "role": "Software Engineer Intern",
+        "company": "Origence",
+        "logo": "asset/experience/origence.jpeg",
+        "date": "July 2022 - November 2022",
+        "companyUrl": "https://www.linkedin.com/company/origencecompany/posts/?feedView=all",
+        "description": [
+            "Handled documentation for updating the development environment to .NET Framework 4.8 to decrease the provisioning time.",
+            "Enhanced deployment control by implementing LaunchDarkly feature flags and updated configuration management.",
+            "Built and maintained CI/CD pipelines in Azure DevOps to automate deployments, testing, and release validation.",
+            "Pioneered Playwright automation framework and presented implementation strategy company-wide to improve test coverage."
+        ],
+        "skills": [
+            "Azure DevOps",
+            "CI/CD",
+            "LaunchDarkly",
+            "Playwright",
+            ".NET"
+        ]
+    },
+    {
+        "role": "Course Tutor",
+        "company": "Chapman University",
+        "logo": "asset/experience/chapman.jpeg",
+        "date": "February 2019 - May 2022",
+        "companyUrl": "https://www.chapman.edu/",
+        "description": [
+            "Tutored various mathematics and computer science classes at Chapman University, supporting student learning and assignments.",
+            "Chapman University: B.S. in Software Engineering, Minor in Game Development Programming | May 2022",
+            "Awards: 2022 IEEE GameSIG Finalist | Dean's Scholar | Thurgood Marshall Scholar | CSF Sealbearer"
+        ],
+        "skills": [
+            "Tutoring",
+            "Mathematics",
+            "Computer Science"
+        ]
+    }
+]

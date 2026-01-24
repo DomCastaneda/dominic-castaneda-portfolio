@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Image Recognition Pollination Robot",
+    "description": "Built an autonomous robot using TensorFlow's MobileNetV2 to identify flower types for pollination purposes.",
+    "image_url": "asset/projects/pollinatorbot.png",
+    "link": "https://github.com/DomCastaneda",
+    "skills": ["Machine Learning", "C++", "Python"]
+  },
+  {
+    "name": "California Housing Prices Data Analysis",
+    "description": "Performed a planned analysis on the California housing market using supervised models to evaluate predictor influence on housing prices.",
+    "image_url": "asset/projects/housingprices.jpg",
+    "link": "https://github.com/DomCastaneda/California-Housing-Prices-Data-Anaylsis",
+    "skills": ["R", "Python", "Data Visiualization"]
+  },
+  {
+    "name": "Social Media Screensaver",
+    "description": "Cross-platform Electron app integrating Instagram and Reddit APIs to dynamically generate personalized screensavers.",
+    "image_url": "asset/projects/screensaverapp.png",
+    "link": "https://github.com/tarekel96/Electron_BackgroundImage_App",
+    "skills": ["React", "Electron", "JavaScript"]
+  },
+  {
+    "name": "Car Part Web Scraper",
+    "description": "Web scraping tool that aggregates and compares car part prices, with CI/CD automation and unit testing in Jenkins.",
+    "image_url": "asset/projects/webscraper.png",
+    "link": "https://github.com/DomCastaneda/CarPartWebscraper",
+    "skills": ["Java", "Jenkins", "Unit Testing"]
+  },
+  {
+    "name": "Word Worm",
+    "description": "A 2D side-scroller that teaches children to spell and read. Play as a worm collecting apples to spell sight words. Built in Unity for Android and iOS.",
+    "image_url": "asset/projects/wordworm.jpg",
+    "link": "https://og-josh.itch.io/word-worm",
+    "skills": ["Unity", "C#", "Animation"]
+  }
+]

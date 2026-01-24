@@ -1,201 +1,1208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dominic Castaneda - Software Engineer Portfolio" />
-  <title>Dominic Castaneda | Software Engineer</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="asset/site-logo/dc-logo.jpg">
+    <title>Dominic Castaneda</title>
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        div {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.9s ease-out, transform 0.2s ease-out;
+        }
+
+        .fade-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+
+        .the-one-who-got-it-all {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 1000px;
+            margin: 0 auto;
+            gap: 10px;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav h1 {
+            font-size: 40px;
+            margin-top: 0;
+        }
+
+        nav p {
+            color: rgba(255, 255, 255, 0.612);
+            font-weight: 250;
+        }
+
+        .txt {
+            font-size: 18px;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.92);
+            margin: 10px 0;
+            font-weight: 300;
+        }
+
+
+        .profile {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 12px;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        .mail-id {
+            color: #959595;
+            text-decoration: none;
+            transition: 0.5s;
+            width: max-content;
+        }
+
+        .mail-id:hover {
+            color: #fff;
+            padding-left: 10px;
+        }
+
+
+        .social-main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: min-content;
+            gap: 10px;
+        }
+
+        .social-icon {
+            height: 20px;
+        }
+
+        .social {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            font-size: 14px;
+            gap: 10px;
+            background-color: #0d0d0d;
+            padding: 5px 7px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            transition: background-color 0.3s, color 0.3s, transform 0.2s;
+            opacity: 0.8;
+        }
+
+        .social:hover {
+            background-color: #222;
+            opacity: 1;
+            transform: translateY(-3px) scale(1.04);
+        }
+
+        .openlink {
+            filter: invert(1);
+            height: 20px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main section h3 {
+            font-size: 22.4px;
+            font-weight: 250;
+            margin: 20px 10px;
+        }
+
+        .main-clmn {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .xp-card {
+            padding: 15px;
+            background-color: #000000;
+            border-radius: 20px;
+            color: white;
+            margin: 7px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .xp-card.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .company-details {
+            display: flex;
+            align-items: center;
+        }
+
+        .company-details .logo {
+            height: 40px;
+        }
+
+        .company-details h2 {
+            font-weight: 200;
+            margin: 10px;
+        }
+
+        .xp-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .xp-head p {
+            font-weight: 100;
+        }
+
+        .xp-card .date {
+            font-size: 14px;
+            color: #c9c9c9;
+        }
+
+        .xp-card ul li {
+            font-weight: 200;
+            list-style: circle;
+            margin: 5px 0;
+            color: #b8b8b8;
+        }
+
+        .skill-tag-cloud {
+            height: 355px;
+            aspect-ratio: 1;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 850px) {
+
+            .the-one-who-got-it-all {
+                display: grid;
+                grid-template-columns: 1fr;
+                margin: 0 auto;
+                gap: 10px;
+            }
+
+
+            .main-clmn {
+                margin: 0 10px;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .xp-card {
+                margin: 10px;
+            }
+
+            .contact-container {
+                margin: 10px;
+            }
+
+            nav {
+                position: relative;
+                top: 0;
+                height: min-content;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+            }
+
+            .title-txt,
+            .txt,
+            .profile {
+                margin: 20px 10px;
+            }
+
+            .profile {
+                grid-template-columns: 50px 1fr;
+            }
+
+            .profile-pic {
+                width: 50px;
+                height: 50px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .contact-container {
+                border-radius: 20px;
+                padding: 10px;
+                overflow: hidden;
+            }
+        }
+
+        .section-title {
+            font-size: 30px;
+        }
+
+
+        .exp-card {
+            padding: 25px;
+            background-color: #0D0D0D;
+            border-radius: 30px;
+            margin: 10px;
+            border: 1px solid #333;
+            transition: box-shadow 0.2s, transform 0.2s, background-color 0.2s, border-color 0.2s;
+        }
+
+        .exp-card:hover {
+            box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+            transform: translateY(-3px) scale(1.015);
+            background-color: #0f0f0f;
+            border-color: #3e3e3e;
+        }
+
+        .exp-card:hover {
+            cursor: pointer;
+        }
+
+        .card-header-text h3 {
+            position: relative;
+            transition: color 0.2s;
+            max-width: max-content;
+        }
+
+        .card-header-text h3::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 2px;
+            background: currentColor;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        .exp-card:hover .card-header-text h3::after {
+            transform: scaleX(1);
+        }
+
+        .card-header-grid {
+            display: grid;
+            grid-template-columns: 50px auto 20px;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .compamylogo {
+            width: 100%;
+        }
+
+        .redirection-logo {
+            filter: invert(1);
+        }
+
+        .card-header-text h3,
+        .card-header-text p {
+            margin: 5px 0;
+        }
+
+        .card-header-text p {
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .card-header-grid ul {
+            padding: 0 0 0 15px;
+            margin: 0 0 15px 0;
+        }
+
+        .card-header-grid ul li {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #b8b8b8;
+            list-style: disc;
+        }
+
+        .exp-card .skill-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            padding-top: 10px;
+        }
+
+        .exp-card .skill-card {
+            background-color: #101013;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 12px;
+            color: rgb(219, 219, 219);
+            border: 1px solid #333;
+        }
+
+        .pro-card {
+            background-color: #0D0D0D;
+            border-radius: 30px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            border: 1px solid #333;
+            width: 100%;
+            margin: 12px 0; /* uniform vertical spacing to prevent overlap */
+        }
+
+        @media (max-width: 850px) {
+            .pro-card {
+                width: auto;
+            }
+        }
+
+        .pro-card-title {
+            display: flex;
+            flex-direction: column; /* stack image above title */
+            align-items: flex-start;
+            gap: 12px;
+            width: auto;
+        }
+
+        /* Keep existing small-icon styling but avoid affecting .project-thumb */
+        .pro-card-title img:not(.project-thumb) {
+            width: 23px;
+            padding: 3px;
+            background-color: #F4F4F3;
+            border-radius: 10px;
+            filter: invert(1);
+            border: 1px solid #c7c7c7;
+        }
+
+        /* Larger thumbnail for manual project cards */
+        .project-thumb {
+            width: 260px; /* wider */
+            height: 160px;
+            border-radius: 8px;
+            object-fit: cover;
+            display: block;
+            filter: none; /* reset any inherited image filters */
+            background-color: transparent;
+            padding: 0;
+            border: 1px solid #333;
+        }
+
+        .pro-card-header {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        @media screen and (max-width: 850px) {
+            .project-thumb {
+                width: 140px;
+                height: 88px;
+            }
+            .pro-card-header {
+                gap: 12px;
+            }
+        }
+
+        .pro-card-title h3 {
+            font-size: 22.4px;
+            font-weight: 300;
+            margin: 0;
+            white-space: normal;
+            overflow: visible;
+            text-overflow: unset;
+            line-height: 1.2;
+            flex: 1 1 auto; /* allow title to take remaining space */
+            word-break: break-word;
+        }
+
+        .pro-card-header p {
+            font-size: 12px;
+            font-weight: 300;
+            margin: 5px 0;
+            color: #b8b8b8;
+        }
+
+        .skill-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .pro-card .skill-card {
+            background-color: #101013;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 300;
+            color: #F4F4F3;
+            border: 1px solid #333;
+        }
+
+        .pro-card-body {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .pro-card-body ul {
+            padding: 0 0 0 10px;
+            margin: 0;
+            list-style: disc;
+        }
+
+        .pro-card-body ul li {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 300;
+            color: #b8b8b8;
+            line-height: 1.4;
+        }
+
+        .pro-card:hover .view-on-github {
+            text-decoration: underline;
+        }
+
+        .certificate-card {
+            background-color: #000000;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 8px;
+            /* Adjusted from 0 to add space between cards */
+            /* Make it responsive */
+            aspect-ratio: 16/9;
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+            opacity: 1;
+            /* Override generic div opacity */
+            transform: none;
+            /* Override generic div transform */
+            border: 1px solid #333;
+        }
+
+        .certificate-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .certificate-card-content {
+            background-color: #000000b8;
+            border-radius: 20px;
+            padding: 10px 20px;
+            overflow: hidden;
+            margin: 10px;
+            /* margin-bottom: 0; Removed as padding is on parent */
+            backdrop-filter: blur(10px);
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+            opacity: 1;
+            /* Ensure content container is not transparent */
+        }
+
+        .certificate-card:hover .certificate-card-content {
+            transform: translateY(0);
+        }
+
+        .certificate-card-content h2 {
+            font-size: 22.4px;
+            margin: 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .certificate-card:hover .certificate-card-content h2 {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .certificate-card-content p {
+            font-size: 14px;
+            margin: 0;
+            color: #bbbbbb;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s ease-in-out 0.1s, transform 0.3s ease-in-out 0.1s;
+        }
+
+        .certificate-card:hover .certificate-card-content p {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .certificate-card-content-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 1;
+            /* Override global div opacity */
+            transform: none;
+            /* Override global div transform */
+        }
+
+        .certificate-card-content-bottom a {
+            font-size: 14px;
+            margin: 0;
+            color: #bbbbbb;
+            text-decoration: none;
+            background-color: black;
+            padding: 5px 10px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .certificate-card-content-bottom a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        @media screen and (max-width: 600px) {
+            .main-clmn {
+                grid-template-columns: 1fr;
+            }
+
+            .pro-card:nth-child(even) {
+                margin: 0;
+            }
+
+            .social-main {
+                margin: 10px;
+            }
+
+            .certificate-card {
+                margin: 10px;
+            }
+        }
+    </style>
 </head>
+
 <body>
+    <div class="the-one-who-got-it-all">
+        <nav>
+            <div id="sidebar">
+                <h1 class="title-txt">
+                        <span style="
+                        position: relative;
+                        display: inline-block;
+                    ">
+                        <span style="
+                            position: absolute;
+                            inset: 0;
+                            z-index: 0;
+                            background: rgb(255, 255, 255);
+                            border-radius: 6px;
+                            pointer-events: none;
+                        "></span>
+                        <span style="
+                            position: relative;
+                            z-index: 1;
+                            background: url('asset/gifs/bg-gif.gif') center center / cover no-repeat, rgb(0, 0, 0);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            background-clip: text;
+                            color: transparent;
+                            display: inline-block;
+                            animation: animated-gif-bg 8s linear infinite alternate;
+                            padding: 0 2px;
+                        ">
+                            Dominic Castaneda
+                        </span>
+                    </span>
+                    <style>
+                        @keyframes animated-gif-bg {
+                            0% {
+                                background-position: 0% 50%;
+                            }
+                            100% {
+                                background-position: 100% 50%;
+                            }
+                        }
+                    </style>
+                </h1>
+                <p class="txt">I’m a Software Engineer focused on building scalable, reliable, and user-focused software. I aim to create software that’s both efficient and impactful. 
+                    I am passionate about research and have co-authored and published papers through UC Irvine Health, developing bioinformatics workflows for spatial transcriptomic data analysis 
+                    and contributing to cancer genomics research presented at AACR 2024. Feel free to reach out, I’m always open to connecting with engineers, researchers, and innovators.</p>
+                <div class="profile">
+                    <img class="profile-pic" style="height: 100px; border-radius: 50%;" src="asset/pfp/pfp2.0.jpeg" alt="">
+                    <a class="mail-id" href="mailto:dominic.amir.castaneda@gmail.com">dominic.amir.castaneda@gmail.com</a>
+                </div>
 
-  <!-- ====== Header / Hero Section ====== -->
-  <header class="hero">
-    <div class="container">
-      <div class="profile-pic">
-        <img src="assets/img/pfptrans.png" alt="Dominic Castaneda" />
-      </div>
-      <h1>Dominic Castaneda</h1>
-      <h2>Software Engineer</h2>
-      <p class="tagline">Building scalable, reliable software with clean architecture and meaningful impact.</p>
-      <div class="hero-buttons">
-        <a href="https://www.linkedin.com/in/dominic-castaneda/" target="_blank" class="btn-primary">LinkedIn</a>
-        <a href="https://github.com/dominic-castaneda" target="_blank" class="btn-outline">GitHub</a>
-      </div>
+                <div class="social-main">
+                    <a class="social" target="_blank" href="https://github.com/DomCastaneda">
+                        <img src="asset/github.svg" class="social-icon" alt="">
+                        GitHub
+                        <img src="asset/openlink.svg" class="openlink" alt="">
+                    </a>
+                    <a class="social" target="_blank" href="https://www.linkedin.com/in/dominic-castaneda/">
+                        <img src="asset/linkedin.svg" class="social-icon" style="filter: invert(1);" alt="">
+                        Linkedin
+                        <img src="asset/openlink.svg" class="openlink" alt="">
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <section id="section1">
+                <h3 class="section-title">Skills</h3>
+                <div class="skill-tag-cloud"></div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+                <script>
+                    const scn = new THREE.Scene(), cam = new THREE.PerspectiveCamera(75, 1, 0.1, 1e3), rndr = new THREE.WebGLRenderer({ antialias: !0, alpha: true }), grp = new THREE.Group(), ldr = new THREE.TextureLoader(), icons = ['angular', 'arduino', 'azure', 'css', 'cplusplus', 'datadog', 'docker', 'dotnet', 'figma', 'git', 'github', 'html', 'javascript', 'jira', 'jquery', 'mongo','nodejs', 'octopus', 'python', 'postman', 'react', 'sql', 'typescript', 'vscode'].map(i => `asset/${i}.svg`), sps = [], r = 27, s = 6, c = document.querySelector('.skill-tag-cloud');
+                    rndr.setSize(375, 375); c.appendChild(rndr.domElement);
+                    rndr.setClearColor(0x000000, 0);
+
+                    icons.forEach((p, i) => ldr.load(p, t => {
+                        const phi = Math.acos(-1 + 2 * i / icons.length), theta = Math.sqrt(icons.length * Math.PI) * phi, sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: t }));
+                        sp.scale.set(s, s, 1); sp.position.set(r * Math.cos(theta) * Math.sin(phi), r * Math.sin(theta) * Math.sin(phi), r * Math.cos(phi));
+                        grp.add(sp); sps.push(sp);
+                    }));
+
+                    scn.add(grp); cam.position.z = 50;
+                    const ry = new THREE.Raycaster();
+
+                    let canvasRect = rndr.domElement.getBoundingClientRect();
+
+                    function updateCanvasRect() {
+                        canvasRect = rndr.domElement.getBoundingClientRect();
+                    }
+
+                    window.addEventListener('scroll', updateCanvasRect);
+                    window.addEventListener('resize', updateCanvasRect);
+
+                    window.addEventListener('click', e => {
+                        if (e.clientX >= canvasRect.left && e.clientX <= canvasRect.right && e.clientY >= canvasRect.top && e.clientY <= canvasRect.bottom) {
+                            ry.setFromCamera({ x: 2 * (e.clientX - canvasRect.left) / 375 - 1, y: 2 * -(e.clientY - canvasRect.top) / 375 + 1 }, cam);
+                            const it = ry.intersectObjects(sps)[0]; it && grp.attach(it.object);
+                        }
+                    });
+
+                    let mx = 0, my = 0;
+                    window.addEventListener('mousemove', e => {
+                        if (e.clientX >= canvasRect.left && e.clientX <= canvasRect.right && e.clientY >= canvasRect.top && e.clientY <= canvasRect.bottom) {
+                            mx = .01 * (e.clientX - canvasRect.left) / 375 - 1;
+                            my = 2 * -(e.clientY - canvasRect.top) / 375 + 1;
+                        }
+                    });
+
+                    (function anm() {
+                        requestAnimationFrame(anm);
+                        grp.rotation.y += .005 + mx * .02;
+                        grp.rotation.x += my * .02;
+                        grp.children.forEach(s => s.lookAt(cam.position));
+                        rndr.render(scn, cam);
+                    })();
+                </script>
+            </section>
+
+            <script>
+                fetch('experience.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const section = document.getElementById('section2');
+
+                        data.forEach(exp => {
+                            const card = document.createElement('div');
+                            card.className = 'exp-card';
+
+                            card.innerHTML = `
+                                <div class="card-header-grid">
+                                    <img src="${exp.logo}" alt="${exp.company} logo" class="compamylogo" style="${exp.logoStyle || ''}">
+                                    
+                                    <div class="card-header-text">
+                                        <h3>${exp.company}</h3>
+                                        <p>${exp.role} | ${exp.date}</p>
+                                    </div>
+                                    <div style="height: 100%; display: flex; align-items: flex-start; justify-content: right;">
+                                        <img src="asset/openlink.svg" alt="Open link" class="redirection-logo">
+                                    </div>
+                                    <div></div>
+                                    <ul>
+                                        ${exp.description ? exp.description.map(point => `<li>${point}</li>`).join('') : ''}
+                                    </ul>
+                                </div>
+                                    ${exp.skills ? `
+                                    <div class="skill-cards">
+                                        ${exp.skills.map(skill => `<div class="skill-card">${skill}</div>`).join('')}
+                                    </div>
+                                    ` : ''}
+                            `;
+                            if (exp.companyUrl) {
+                                card.addEventListener('click', () => {
+                                    window.open(exp.companyUrl, '_blank');
+                                });
+                            }
+                            section.appendChild(card);
+                        });
+                    })
+                    .catch(err => {
+                        console.error('Failed to load experience data:', err);
+                    });
+            </script>
+
+
+            <section id="section2">
+                <h3 class="section-title">Experience</h3>
+                <!-- Cards will be inserted here -->
+            </section>
+
+
+            <section id="section3">
+                <h3 class="section-title">Projects</h3>
+                <div class="main-clmn" id="main-clmn">
+                    <!-- Project cards will be inserted here -->
+                </div>
+                <script>
+                    // Load projects from a local JSON file (`projects.json`) and render manual project cards
+                    document.addEventListener('DOMContentLoaded', async function () {
+                        try {
+                            const res = await fetch('projects.json');
+                            if (!res.ok) throw new Error('Failed to load projects.json');
+                            const projects = await res.json();
+                            const mainClmn = document.getElementById('main-clmn');
+
+                            projects.forEach(p => {
+                                const card = document.createElement('div');
+                                card.className = 'pro-card';
+                                if (p.link) {
+                                    card.addEventListener('click', () => window.open(p.link, '_blank'));
+                                }
+
+                                const formatDate = (dateString) => {
+                                    if (!dateString) return '';
+                                    const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+                                    return new Date(dateString).toLocaleDateString(undefined, options);
+                                };
+
+                                const created = formatDate(p.created_at);
+                                const updated = formatDate(p.updated_at);
+                                const skillsHtml = (p.skills || []).map(s => `<div class="skill-card">${s}</div>`).join('');
+
+                                const thumb = p.image_url || 'https://www.svgrepo.com/show/521573/code.svg';
+
+                                card.innerHTML = `
+                                    <div class="pro-card-header">
+                                                <div class="pro-card-title">
+                                                    <img src="${thumb}" alt="Project image" class="project-thumb">
+                                                    <h3>${p.name}</h3>
+                                                </div>
+                                    </div>
+                                    <div class="pro-card-body">
+                                        <ul>
+                                            <li>${p.description || 'No description available.'}</li>
+                                            <li class="view-on-github">${p.link ? 'View project' : ''}</li>
+                                        </ul>
+                                        <div class="skill-cards">
+                                            ${skillsHtml}
+                                        </div>
+                                    </div>
+                                `;
+
+                                mainClmn.appendChild(card);
+                            });
+                        } catch (err) {
+                            console.error('Failed to load projects:', err);
+                        }
+                    });
+                </script>
+            </section>
+
+            <section id="section5">
+                <h3 class="section-title">Research</h3>
+            </section>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    fetch('research.json')
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(`HTTP error! status: ${response.status}`);
+                            }
+                            return response.json();
+                        })
+                        .then(research => {
+                                    const section = document.getElementById('section5');
+                                    if (!section) {
+                                        console.error('Research section (section5) not found.');
+                                        return;
+                                    }
+
+                                    research.forEach(cert => {
+                                        const card = document.createElement('div');
+                                        card.className = 'certificate-card';
+                                        // Apply background image only if provided
+                                        if (cert.image_url) {
+                                            card.style.backgroundImage = `url(${cert.image_url})`;
+                                        } else {
+                                            card.style.backgroundImage = 'none';
+                                        }
+                                        // Set ARIA label for accessibility
+                                        card.setAttribute('aria-label', `${cert.title} research`);
+
+                                        const content = document.createElement('div');
+                                        content.className = 'certificate-card-content';
+
+                                        const title = document.createElement('h2');
+                                        title.textContent = cert.title;
+
+                                        const bottomContent = document.createElement('div');
+                                        bottomContent.className = 'certificate-card-content-bottom';
+
+                                        const details = document.createElement('p');
+                                        // Prefer organization for research entries, fallback to credential_id for research
+                                        details.innerHTML = `${cert.date}${cert.organization ? '<br>' + cert.organization : (cert.credential_id ? '<br>Credential ID: ' + cert.credential_id : '')}`;
+
+                                        const link = document.createElement('a');
+                                        link.href = cert.view_url;
+                                        link.target = '_blank';
+                                        link.textContent = 'View';
+                                        // Add ARIA label to link for accessibility
+                                        link.setAttribute('aria-label', `View ${cert.title} research details`);
+
+
+                                        bottomContent.appendChild(details);
+                                        bottomContent.appendChild(link);
+
+                                        content.appendChild(title);
+                                        content.appendChild(bottomContent);
+
+                                        card.appendChild(content);
+                                        section.appendChild(card);
+                                    });
+                                })
+                        })
+                        .catch(err => {
+                            console.error('Failed to load or process certificate data:', err);
+                            const section = document.getElementById('section5');
+                            if (section) {
+                                section.innerHTML += '<p style="color:red;">Could not load research.</p>';
+                            }
+                        });
+            </script>
+        </main>
     </div>
-  </header>
 
-  <!-- ====== Stats Section ====== -->
-  <section class="stats">
-    <div class="container">
-      <div class="stat">
-        <h3>3+</h3>
-        <p>Years Experience</p>
-      </div>
-      <div class="stat">
-        <h3>7+</h3>
-        <p>Completed Projects</p>
-      </div>
-      <div class="stat">
-        <h3>1</h3>
-        <p>Publication</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- ====== About Section ====== -->
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I’m a Software Engineer passionate about building scalable, reliable, and user-focused software. 
-        My experience spans cloud migration, API development, and CI/CD automation — most recently at Origence, 
-        where I worked with .NET 6+, MongoDB Atlas, and Azure DevOps Pipelines to enhance system performance and deployment stability.
-      </p>
-      <p>
-        I’ve also co-authored published research through UC Irvine Health, developing bioinformatics workflows 
-        for spatial transcriptomic data analysis presented at AACR 2024. 
-        I value collaboration, continuous learning, and creative problem solving.
-      </p>
-    </div>
-  </section>
+    <style>
+        .macos-dock {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 8px;
+            height: 58px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            z-index: 1000;
+            background-color: #0d0d0dc0;
+            backdrop-filter: blur(10px);
+            height: 37px;
+        }
 
-  <!-- ====== Experience Section ====== -->
-  <section id="experience">
-    <div class="container">
-      <h2>Experience</h2>
+        .items {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 0 8px;
+        }
 
-      <div class="job">
-        <h3>Origence | Software Engineer</h3>
-        <p class="date">Jul 2023 – Present</p>
-        <ul>
-          <li>Collaborated with senior engineers to modernize and migrate web applications and APIs to cloud infrastructure using MongoDB Atlas and .NET 6+.</li>
-          <li>Built and maintained CI/CD pipelines in Azure DevOps to automate deployments and testing.</li>
-          <li>Pioneered Playwright automation framework and presented implementation strategy company-wide to improve test coverage and release reliability.</li>
-          <li>Verified system health and API performance after releases using Datadog dashboards and alerts to ensure stability and uptime.</li>
-        </ul>
-      </div>
+        .item {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            top: 0;
+            position: relative;
+            transition: width 0.3s cubic-bezier(.4, 2, .6, 1), height 0.3s cubic-bezier(.4, 2, .6, 1);
+        }
 
-      <div class="job">
-        <h3>UC Irvine Health | Data Scientist</h3>
-        <p class="date">Feb 2023 – Jul 2023</p>
-        <ul>
-          <li>Developed bioinformatics pipelines for genomic data analysis using R and Python.</li>
-          <li>Co-authored AACR 2024 abstract on spatial transcriptomic analysis of prostate cancer, contributing bioinformatics and data visualization.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+        .item::before {
+            content: attr(data-tooltip);
+            display: block;
+            position: absolute;
+            top: -28px;
+            font-size: 10px;
+            border-radius: 4px;
+            color: #e0e0e0;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            background: #0D0D0D;
+            padding: 3px 8px;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.1s ease-out opacity;
+        }
 
-  <!-- ====== Projects Section ====== -->
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-grid">
+        .item:hover::before {
+            opacity: 1;
+        }
 
-        <div class="project-card">
-          <img src="assets/img/projects/pollinatorbot.png" alt="Pollination Robot" />
-          <h3>Image Recognition Pollination Robot</h3>
-          <p>Built an autonomous robot using TensorFlow’s MobileNetV2 for flower classification and optimized model parameters by 5×.</p>
-          <a href="https://github.com/dominiccastaneda/pollination-robot" target="_blank" class="btn-outline">View Project</a>
+        .item>svg {
+            width: 50%;
+            color: #f0f0f0;
+        }
+
+        .item img {
+            filter: invert(0.5);
+            width: 60%;
+            transition: filter 0.3s cubic-bezier(.4, 2, .6, 1);
+        }
+
+        .item img:hover {
+            filter: invert(1);
+        }
+
+        .item.active>img {
+            filter: invert(1);
+        }
+
+        /* Animation for dock item when section changes */
+        .item.section-animate {
+            width: 60px !important;
+            height: 60px !important;
+            z-index: 2;
+        }
+    </style>
+
+    <div id="dock-wrapper"
+        style="position: fixed; bottom: 10px; display: flex; align-items: center; justify-content: center; width: 100%;">
+
+        <div class="macos-dock" data-vel-plugin="MacOsDock" data-vel-view="root">
+            <div class="items">
+                <a href="#section1" class="item active" data-vel-view="item" data-tooltip="Skills">
+                    <img src="https://www.svgrepo.com/show/483886/brain-illustration-12.svg" alt="">
+                </a>
+                <a href="#section2" class="item" data-vel-view="item" data-tooltip="Experience">
+                    <img src="https://www.svgrepo.com/show/483943/old-man-1.svg" alt="">
+                </a>
+                <a href="#section3" class="item" data-vel-view="item" data-tooltip="Projects">
+                    <img src="https://www.svgrepo.com/show/521997/briefcase.svg" alt="">
+                </a>
+                <a href="#section5" class="item" data-vel-view="item" data-tooltip="Research">
+                    <img src="https://www.svgrepo.com/show/390228/research-lab-analytics.svg" alt="">
+                </a>
+            </div>
         </div>
-
-        <div class="project-card">
-          <img src="assets/img/projects/housingprices.jpg" alt="California Housing Analysis" />
-          <h3>California Housing Data Analysis</h3>
-          <p>Analyzed housing market data using Python regression models to identify key predictors of income trends.</p>
-          <a href="https://github.com/dominiccastaneda/housing-analysis" target="_blank" class="btn-outline">View Project</a>
-        </div>
-
-        <div class="project-card">
-          <img src="assets/img/projects/screensaverapp.png" alt="Social Media Screensaver" />
-          <h3>Social Media Screensaver</h3>
-          <p>Built a cross-platform Electron app integrating Instagram and Reddit APIs for dynamic, personalized screensavers.</p>
-          <a href="https://github.com/dominiccastaneda/social-screensaver" target="_blank" class="btn-outline">View Project</a>
-        </div>
-
-        <div class="project-card">
-          <img src="assets/img/projects/webscraper.png" alt="Car Part Scraper" />
-          <h3>Car Part Web Scraper</h3>
-          <p>Developed a Java/SQL web scraper automating price comparisons with CI/CD automation and unit testing.</p>
-          <a href="https://github.com/dominiccastaneda/car-part-scraper" target="_blank" class="btn-outline">View Project</a>
-        </div>
-
-        <!-- New Word Worm project -->
-        <div class="project-card">
-          <img src="assets/img/projects/wordworm.jpg" alt="Word Worm Game" />
-          <h3>Word Worm</h3>
-          <p><strong>Gameplay Engineer —</strong> Word Worm is a 2D side-scroller that teaches children to spell and read. 
-          You play as a worm collecting apples to spell sight words. Built in Unity for Android and iOS.</p>
-          <a href="https://og-josh.itch.io/word-worm" target="_blank" class="btn-outline">View Project</a>
-        </div>
-
-      </div>
     </div>
-  </section>
 
-    <!-- ====== My Stack Section ====== -->
-    <section id="stack">
-        <div class="container">
-          <h2>My Stack</h2>
-    
-          <!-- ===== FRONTEND ===== -->
-          <h3 class="stack-category">Frontend</h3>
-          <div class="stack-grid">
-            <img src="assets/icons/html5.svg" alt="HTML5" title="HTML5" />
-            <img src="assets/icons/css.svg" alt="CSS" title="CSS" />
-            <img src="assets/icons/javascript.svg" alt="JavaScript" title="JavaScript" />
-            <img src="assets/icons/react.svg" alt="React" title="React" />
-            <img src="assets/icons/angular.svg" alt="Angular" title="Angular" />
-            <img src="assets/icons/figma.svg" alt="Figma" title="Figma" />
-          </div>
-    
-          <!-- ===== BACKEND ===== -->
-          <h3 class="stack-category">Backend</h3>
-          <div class="stack-grid">
-            <img src="assets/icons/python.svg" alt="Python" title="Python" />
-            <img src="assets/icons/cplusplus.svg" alt="C++" title="C++" />
-            <img src="assets/icons/nodedotjs.svg" alt="Node.js" title="Node.js" />
-            <img src="assets/icons/dotnet.svg" alt=".NET" title=".NET" />
-            <img src="assets/icons/mongodb.svg" alt="MongoDB" title="MongoDB" />
-            <img src="assets/icons/mysql.svg" alt="MySQL" title="MySQL" />
-          </div>
-    
-          <!-- ===== TOOLS ===== -->
-          <h3 class="stack-category">Tools</h3>
-          <div class="stack-grid">
-            <img src="assets/icons/git.svg" alt="Git" title="Git" />
-            <img src="assets/icons/github.svg" alt="GitHub" title="GitHub" />
-            <img src="assets/icons/docker.svg" alt="Docker" title="Docker" />
-            <img src="assets/icons/teamcity.svg" alt="TeamCity" title="TeamCity" />
-            <img src="assets/icons/octopusdeploy.svg" alt="Octopus Deploy" title="Octopus Deploy" />
-            <img src="assets/icons/postman.svg" alt="Postman" title="Postman" />
-            <img src="assets/icons/jira.svg" alt="Jira" title="Jira" />
-            <img src="assets/icons/datadog.svg" alt="Datadog" title="Datadog" />
-          </div>
-        </div>
-      </section>    
+    <script>
+        const { createApp, Events, Utils } = Veloxi
 
-  <!-- ====== Publications Section ====== -->
-  <section id="publications">
-    <div class="container">
-      <h2>Publications</h2>
-      <div class="publication">
-        <h3>Spatial Transcriptomic Analysis of Histologically Matched Regions Adjacent to and Within Prostate Cancer Reveals RNA Expression Differences Between African Americans and European Americans</h3>
-        <p><em>American Association for Cancer Research (AACR) Annual Meeting 2024</em></p>
-        <a href="https://aacrjournals.org/cancerres/article/84/6_Supplement/2150/736323/Abstract-2150-Spatial-transcriptomic-analysis-of" target="_blank" class="btn-primary">Read Publication</a>
-      </div>
-    </div>
-  </section>
+        const MacOsDockPlugin = (context) => {
+            let items
+            let root
+            context.subscribeToEvents((eventBus) => {
+                eventBus.subscribeToEvent(Events.PointerMoveEvent, onMouseMove)
+            })
 
-  <!-- ====== Footer ====== -->
-  <footer>
-    <div class="container">
-      <p><a href="mailto:dominic.amir.castaneda@gmail.com">dominic.amir.castaneda@gmail.com</a></p>
-    </div>
-  </footer>
+            function onMouseMove(event) {
+                if (!root.intersects(event.x, event.y)) {
+                    items.forEach((item) => {
+                        item.size.reset()
+                    })
+                    return
+                }
+                items.forEach((item) => {
+                    const progress = Utils.pointToViewProgress(
+                        { x: event.x, y: event.y },
+                        item,
+                        120
+                    )
+                    const scale = Utils.remap(progress, 0, 1, 1, 2)
+                    item.size.set({ width: 40 * scale, height: 40 * scale })
+                })
+            }
 
-  <script src="assets/js/main.js"></script>
+            context.setup(() => {
+                root = context.getView('root')
+                items = context.getViews('item')
+                items.forEach((item) => {
+                    item.size.setAnimator('dynamic')
+                    item.origin.set({ x: 0.5, y: 1 })
+                })
+            })
+        }
+
+        MacOsDockPlugin.pluginName = 'MacOsDock'
+
+        const app = createApp()
+        app.addPlugin(MacOsDockPlugin)
+        app.run()
+    </script>
+
+    <script>
+        // This script will add 'active' class to the dock item when its section is in view
+        // and trigger a dock "pop" animation for 0.3s when the active section changes (like a hover effect)
+        document.addEventListener('DOMContentLoaded', function () {
+            const dockWrapper = document.getElementById('dock-wrapper');
+            const dockItems = document.querySelectorAll('.macos-dock .item');
+            const sections = [
+                document.getElementById('section1'),
+                document.getElementById('section2'),
+                document.getElementById('section3'),
+                document.getElementById('section5')
+            ];
+
+            let lastActiveIndex = -1;
+            let animationTimeout = null;
+
+            function setActiveDockItem() {
+                // If user scrolled to (near) bottom, anchor dock under Research section and highlight Research
+                const nearBottom = (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 60);
+                if (nearBottom) {
+                    const researchSection = document.getElementById('section5');
+                    if (researchSection && dockWrapper) {
+                        const rect = researchSection.getBoundingClientRect();
+                        const topPos = rect.bottom + window.scrollY + 12; // place dock just below research
+                        dockWrapper.style.position = 'absolute';
+                        dockWrapper.style.top = topPos + 'px';
+                        dockWrapper.style.bottom = 'auto';
+                    }
+                    // highlight research item (last index)
+                    dockItems.forEach(item => item.classList.remove('active', 'section-animate'));
+                    const researchIndex = sections.findIndex(s => s && s.id === 'section5');
+                    if (researchIndex >= 0 && dockItems[researchIndex]) {
+                        dockItems[researchIndex].classList.add('active');
+                    }
+                    lastActiveIndex = researchIndex;
+                    return;
+                } else {
+                    // restore fixed dock at bottom
+                    if (dockWrapper) {
+                        dockWrapper.style.position = 'fixed';
+                        dockWrapper.style.bottom = '10px';
+                        dockWrapper.style.top = 'auto';
+                    }
+                }
+
+                let found = false;
+                for (let i = 0; i < sections.length; i++) {
+                    const section = sections[i];
+                    if (!section) continue;
+                    const rect = section.getBoundingClientRect();
+                    // Section is considered in view if its top is above 100px from top and its bottom is below 100px
+                    if (rect.top <= 100 && rect.bottom > 100) {
+                        if (lastActiveIndex !== i) {
+                            // Remove previous animation class
+                            dockItems.forEach(item => item.classList.remove('section-animate'));
+                            // Remove previous active
+                            dockItems.forEach(item => item.classList.remove('active'));
+                            // Set new active
+                            dockItems[i].classList.add('active');
+                            // Add animation class
+                            dockItems[i].classList.add('section-animate');
+                            // Remove animation class after 0.3s
+                            if (animationTimeout) clearTimeout(animationTimeout);
+                            animationTimeout = setTimeout(() => {
+                                dockItems[i].classList.remove('section-animate');
+                            }, 300);
+                            lastActiveIndex = i;
+                        }
+                        found = true;
+                        break;
+                    }
+                }
+                // If no section is in view, remove all actives and animation
+                if (!found) {
+                    dockItems.forEach(item => {
+                        item.classList.remove('active');
+                        item.classList.remove('section-animate');
+                    });
+                    lastActiveIndex = -1;
+                }
+            }
+
+            window.addEventListener('scroll', setActiveDockItem, { passive: true });
+            window.addEventListener('resize', setActiveDockItem);
+            setActiveDockItem();
+        });
+    </script>
+
+    <script>
+        const cards = document.querySelectorAll('.exp-card');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        });
+
+        cards.forEach((card) => {
+            observer.observe(card);
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("fade-in"); // Apply animation
+                        observer.unobserve(entry.target); // Stop observing once animated
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            function observeNewDivs() {
+                document.querySelectorAll("div:not(.certificate-card):not(.certificate-card-content):not(.certificate-card-content-bottom)").forEach((div) => { // Exclude new certificate divs
+                    if (!div.classList.contains("fade-in")) {
+                        observer.observe(div);
+                    }
+                });
+            }
+
+            // Observe existing divs
+            observeNewDivs();
+
+            // Use MutationObserver to detect newly added divs
+            const mutationObserver = new MutationObserver(() => observeNewDivs());
+            mutationObserver.observe(document.body, { childList: true, subtree: true });
+        });
+
+    </script>
 </body>
+
 </html>
