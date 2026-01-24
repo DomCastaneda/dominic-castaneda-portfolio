@@ -1089,7 +1089,8 @@
 
             function setActiveDockItem() {
                 // If user scrolled to (near) bottom, anchor dock under Research section and highlight Research
-                const nearBottom = (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 60);
+                // Require a small scroll threshold to avoid firing on initial layout where scrollY may be 0
+                const nearBottom = (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 60) && window.scrollY > 20;
                 if (nearBottom) {
                     const researchSection = document.getElementById('section5');
                     if (researchSection && dockWrapper) {
